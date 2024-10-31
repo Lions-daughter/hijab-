@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIJAB-ELEGANCE.COM</title>
+    <link rel="shortcut icon" href="img/design-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: whitesmoke;
+    }
+    .ic{
+  color: rgba(170, 41, 41, 0.528);
+}
+.ic:hover{
+  color: gray;
+}
+    .container-1{
+        width: 100%;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        padding-right: 90px;
+    }
+    .container-1 h1{
+        color: black;
+    }
+    .container-1 header{
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        margin-top: 50px;
+    }
+    .container-1 header .shopping{
+        position: relative;
+        text-align: right;
+    }
+    .shopping{
+        font-size: 2rem;
+        color:  rgba(170, 41, 41, 0.528);
+        cursor: pointer;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -o-transition:all 0.25s ease;
+    }
+    .shopping i:hover{
+        color: black;
+    }
+    .shopping span{
+        width: 22px;
+        height: 30px;
+        background-color:  darkgray;
+        border-radius: 50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        -ms-border-radius:50%;
+        -o-border-radius:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        position: absolute;
+        top: -2px;
+        left: 98%;
+        /* padding: 3px 3px; */
+
+    }
+
+    .quantity{
+        font-size: large;
+    }
+    .container-1 .list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+    .card{
+        position:fixed;
+        top: 0;
+        left: 100%;
+        width: 28%;
+        background-color: white; 
+        border: 2px solid  black;
+        height: 100vh;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .active .card{
+        left: calc(100% - 28%);
+    }
+    .active .container-1{
+        transform: translateX(-200px);
+        -webkit-transform: translateX(-200px);
+        -moz-transform: translateX(-200px);
+        -ms-transform: translateX(-200px);
+        -o-transform: translateX(-200px);
+    } 
+    .card h1{
+        color: rgba(170, 41, 41, 0.528);
+        font-weight: bold;
+        margin: 0;
+        padding: 0 20px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .card .checkout{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card .checkout div{
+        background-color: rgba(170, 41, 41, 0.528);
+        color: black;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .card .checkout div:nth-child(2){
+        background-color:  rgba(134, 132, 132, 0.519);
+        color: black;
+    }
+    .list{
+      margin-left:70px;
+    }
+    .list .item{
+        text-align: center;
+        background-color: rgb(248, 245, 245);
+        padding: 20px;
+        box-shadow: 0 50px 50px gray;
+        letter-spacing: 1px;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+
+    }
+    .list .item:hover{
+        background-color: rgb(207, 206, 206);
+        font-size: larger;
+        font: bold;
+    }
+    .list .item img{
+        padding-right: 10px;
+        padding-left: 10px;
+        /* display: flex;
+        justify-content: space-evenly; */
+        width: auto;
+        height: 500px;
+    }
+    .list .item .title{
+        font-weight: 600;
+    }
+    .list .item .price{
+        margin: 10px;
+    }
+    .list .item:hover .title,
+    .list .item:hover .price{
+        color: darkgray;
+    }
+    .list .item button{
+        background-color:  rgba(170, 41, 41, 0.528);
+        color: black;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 60%;
+        padding: 10px;
+        border: 3px solid grey;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+    }
+    .list .item button:hover{
+        background-color: whitesmoke;
+        color: black;
+    }
+    .listcard li{
+        display: grid;
+        grid-template-columns: 100px repeat(3,1fr);
+        color: lightgray;
+        row-gap: 10px;
+    }
+    .listcard li div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .listcard li .image{
+        width: 90%;
+    }
+
+    .listcard .count{
+        margin: 0px 10px;
+        color: black;
+    }
+    .cardTitle,
+    .cardPrice{
+        color: black;
+    }
+    .cardButton{
+        width: 28px;
+        height: 28px;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        -ms-border-radius:50%;
+        -o-border-radius:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+    }
+    .listcard img{
+      width: 90%;
+      height: 120px;
+    }
+    /* .listcards .images{
+      width: 20%;
+      height: 50px;
+    } */
+    .thirdnavbar {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+
+}
+
+.navbar-nav {
+  margin-left: 21vw;
+
+}
+.mainbar {
+  padding-left:  5%; 
+  margin-top: 1%;  
+}
+
+.nav-link {
+  color: rgb(141, 139, 139);
+}
+.nav-link:hover {
+  color: rgba(170, 41, 41, 0.528);
+}
+
+a:hover {
+
+  border-bottom: 0.5px solid rgba(170, 41, 41, 0.528);
+  border-top: 2px solid rgba(170, 41, 41, 0.528);
+}
+/* Base styles for all devices */
+.hijab{
+  padding-left: 5px;
+  font-size: 2vw; /* Responsive font size */
+  color: rgba(170, 41, 41, 0.528);
+  font-family: 'logofont';
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: .5;
+  }
+}
+.blink {
+  color: rgb(255, 255, 255);
+  margin-left: 35PX;
+  text-transform: (-50%, -50%);
+  animation: blink 1s linear infinite;
+  font-weight: bolder;
+}
+
+
+.nav-link:hover {
+  color: rgba(170, 41, 41, 0.528);
+}
+
+.baner {
+            width: 100%;
+            height: 350px;
+            background-image: url(img/naqab\ banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .description{
+            position: absolute;
+            bottom: 120px;
+            right: 25px;
+        }
+        .description h1{
+            font-weight:900;
+            font-size:60px;
+            color: rgba(90, 89, 89, 0.519) ;
+            
+        }
+        .card{
+            padding-bottom: 200px;
+
+        }
+        .portion{
+            margin-top: 100px;
+        }
+       .name h2{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+            text-decoration: underline;
+            color:  rgba(170, 41, 41, 0.528);
+        }
+        .name{
+             margin-top: 30px;
+        }
+        .hi{
+  color: gray;
+  text-decoration: none;
+}
+/* Base styles for all devices */
+.hijab {
+  width: 100%;
+  max-width: 13vw;
+}
+
+.cart {
+  font-size: 30px;
+  margin-left: 140px;
+}
+
+
+.header {
+  width: 100%;
+  height: 5vh;
+  background-color: rgba(170, 41, 41, 0.528);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+.blink {
+  color: rgb(255, 255, 255);
+  margin-left: 35PX;
+  text-transform: (-50%, -50%);
+  animation: blink 1s linear infinite;
+  font-weight: bolder;
+}
+
+.hi{
+  text-decoration: none;
+  color: gray;
+}
+.hi:hover{
+
+text-decoration: none;
+
+}
+
+/* media query max width 992 */
+
+@media (max-width: 992px){
+  .baner {
+            width: 100%;
+            height: 350px;
+            background-image: url(img/naqab\ banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .description{
+            position: absolute;
+            bottom: 90px;
+            right: 20px;
+        }
+        .description h1{
+            font-weight:700;
+            font-size:40px;
+            color: rgba(90, 89, 89, 0.519) ;
+            
+        }
+        .card{
+            padding-bottom: 150px;
+
+        }
+        .portion{
+            margin-top: 90px;
+        }
+       .name h2{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: underline;
+            color:  rgba(170, 41, 41, 0.528);
+        }
+        .name{
+             margin-top: 30px;
+        }
+        .hi{
+  color: gray;
+  text-decoration: none;
+}
+
+.container-1 .list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .list{
+      margin-left:50px;
+      width:120px;
+      height:420px;
+    }
+    .list .item{
+        text-align: center;
+        background-color: rgb(248, 245, 245);
+        padding: 16px;
+        box-shadow: 0 50px 50px gray;
+        letter-spacing: 1px;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+
+    }
+
+    .list .item img{
+        padding-right: 10px;
+        padding-left: 10px;
+        /* display: flex;
+        justify-content: space-evenly; */
+        width: 120;
+        height: 400px;
+    }
+    .list .item .title{
+        font-weight: 500;
+    }
+    .list .item .price{
+        margin: 8px;
+    }
+
+    .list .item button{
+        background-color:  rgba(170, 41, 41, 0.528);
+        color: black;
+        font-size: 0.8rem;
+        font-weight: 500;
+        width: 55%;
+        padding: 8px;
+        border: 3px solid grey;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+    }
+ 
+
+    
+ }   
+
+ /* max width:768px */
+
+ @media (max-width: 768px){
+  
+
+  .container-1{
+        width: 100%;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        margin-bottom:2000px;
+      
+    }
+  .baner {
+            width: 100%;
+            height: 280px;
+            background-image: url(img/naqab\ banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index:-1;
+        }
+        .description{
+            position: absolute;
+            bottom: 90px;
+            right: 20px;
+        }
+        .description h1{
+            font-weight:500;
+            font-size:30px;
+            color: rgba(90, 89, 89, 0.519) ;
+            
+        }
+        .thirdnavbar{
+  height: 90px;
+  width: 100%;
+  background-color: white;
+}
+.navbar-nav {
+      margin-left: 21vw;
+   
+
+}
+        .card{
+            padding-bottom: 120px;
+
+        }
+        .portion{
+            margin-top: 90px;
+        }
+       .name h2{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: underline;
+            color:  rgba(170, 41, 41, 0.528);
+        }
+        .name{
+             margin-top: 20px;
+        }
+        .hi{
+  color: gray;
+  text-decoration: none;
+}
+.thirdnavbar{
+  margin-top: 0px;
+}
+
+.container-1 .list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .list{
+      margin-left:50px;
+      width:100px;
+      height:400px;
+    }
+    .list .item{
+        text-align: center;
+        background-color: rgb(248, 245, 245);
+        padding: 16px;
+        box-shadow: 0 50px 50px gray;
+        letter-spacing: 1px;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+
+    }
+
+    .list .item img{
+        padding-right: 10px;
+        padding-left: 10px;
+        /* display: flex;
+        justify-content: space-evenly; */
+        width: 120;
+        height: 400px;
+    }
+    .list .item .title{
+        font-weight: 500;
+    }
+    .list .item .price{
+        margin: 8px;
+    }
+
+    .list .item button{
+        background-color:  rgba(170, 41, 41, 0.528);
+        color: black;
+        font-size: 0.8rem;
+        font-weight: 500;
+        width: 55%;
+        padding: 8px;
+        border: 3px solid grey;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+    }
+ 
+
+    
+ }   
+
+ /* max width: 576px */
+ @media (max-width: 576px){
+  .container-1{
+        width: 100%;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        margin-bottom:3500px;
+      
+    }
+  .baner {
+            width: 100%;
+            height: 170px;
+            background-image: url(img/naqab\ banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index:-1;
+        }
+   
+        .description{
+            position: absolute;
+            bottom: 90px;
+            right: 20px;
+        }
+        .description h1{
+            font-weight:500;
+            font-size:30px;
+            /* color: rgba(90, 89, 89, 0.519) ; */
+            color:white;
+            
+        }
+        .card{
+            padding-bottom: 120px;
+
+        }
+        .portion{
+            margin-top: 90px;
+        }
+       .name h2{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: underline;
+            color:  rgba(170, 41, 41, 0.528);
+        }
+        .name{
+             margin-top: 20px;
+        }
+        .hi{
+  color: gray;
+  text-decoration: none;
+}
+.thirdnavbar{
+  margin-top: 0px;
+}
+
+.container-1 .list{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .list{
+      margin-left:50px;
+      width:140px;
+      height:400px;
+    }
+    .list .item{
+        text-align: center;
+        background-color: rgb(248, 245, 245);
+        padding: 16px;
+        box-shadow: 0 50px 50px gray;
+        letter-spacing: 1px;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+
+    }
+
+    .list .item img{
+        padding-right: 10px;
+        padding-left: 10px;
+        /* display: flex;
+        justify-content: space-evenly; */
+        width: 120;
+        height: 400px;
+    }
+    .list .item .title{
+        font-weight: 500;
+    }
+    .list .item .price{
+        margin: 8px;
+    }
+
+    .list .item button{
+        background-color:  rgba(170, 41, 41, 0.528);
+        color: black;
+        font-size: 0.8rem;
+        font-weight: 500;
+        width: 55%;
+        padding: 8px;
+        border: 3px solid grey;
+        border-radius: 8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        -webkit-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+        -ms-transition:all 0.25s ease;
+        -moz-transition:all 0.25s ease;
+    }
+ 
+
+    
+ }  
+
+    
+
+
+
+
+    
+</style>
+<body>
+  <div class="header">
+    <p class="blink">FREE SHIPPING ABOVE RUPEES 4500/=</p>
+  </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid thirdnavbar">
+    <img class="hijab" src="img/design-removebg-preview.png" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item mainbar">
+                <a class="nav-link " aria-current="page" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item dropdown mainbar">
+                <a class="nav-link dropdown-toggle" href="hijab.html" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+             HIJAB
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="festive1.html">FESTIVE</a></li>
+                  <li><a class="dropdown-item" href="silk1.html">SILK</a></li>
+                  <li><a class="dropdown-item" href="chiffon.html">CHIFFON</a></li>
+                  <li><a class="dropdown-item" href="geogereet .html">GEORGETTE</a></li>
+                 <li><a class="dropdown-item" href="lawnn.html">LAWN</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mainbar">
+                <a class="nav-link" href="kimono.html">KIMONO</a>
+              </li>
+              <li class="nav-item mainbar">
+                <a class="nav-link" href="aboutus.html">ABOUT</a>
+              </li>
+    
+              <li class="nav-item dropdown mainbar">
+                <a class="nav-link dropdown-toggle" href="accessories.html" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  ACCESSORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="underscrves1.html">CAP</a></li>
+              <li><a class="dropdown-item" href="naqab.html">NAQAB</a></li>
+              <li><a class="dropdown-item" href="surunchies1.html">SCRUNCHIES</a></li>
+                </ul>
+              </li>
+            
+              <div class="shopping">
+                
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+            </ul>
+            
+          </div>
+          <!-- <div class="shopping">
+                
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div> -->
+        </div>
+  
+      </nav>
+
+      <div class="baner">
+        <div class="description">
+           
+        </div>
+       
+
+    </div>
+    <div class="name">
+        <h2>NAQAB</h2>
+    </div>
+
+    <div class="container-1">
+        <!-- <header>
+            <h1>Shopping</h1>
+            <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="quantity">0</span>
+
+            </div>
+        </header> -->
+
+        <div class="list" data-aos="fade-up" data-aos-duration="3000"></div>
+    </div>
+
+    <div class="card">
+     <h1>Your Cart</h1>
+     <ul class="listcard"></ul>
+     <div class="checkout">
+        <div class="total">0</div>
+        <div class="closeshopping">close</div>
+     </div>
+
+    </div>
+
+    
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid m-0" style="background-color: rgba(255, 255, 255, 0.528);">
+
+      <footer class="text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-1">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h4 style="color: white;"></h4>
+
+              <img class="hijab" src="img/design-removebg-preview.png" alt="">
+
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h4 style="padding-bottom: 20px;color:gray;">SIGN UP AND SAVE</h4>
+
+              <div class=" mb-4">
+                <form>
+                  <i class="fa-regular  fa-envelope front" style="color: gray;"></i>
+                  <input type="email" placeholder="Enter your email id" class="enter">
+
+                </form>
+              </div>
+              <div class="icons">
+                <!-- Facebook -->
+                <a type="button" href="https://www.facebook.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-facebook-f ic"></i></a>
+                <!-- Dribbble -->
+                <a type="button" href="https://www.instagram.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-instagram ic"></i></a>
+                <!-- Twitter -->
+                <a type="button" href="https://web.whatsapp.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-whatsapp ic"></i></a>
+                <!-- Google + -->
+                <a type="button" href="https://www.youtube.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-youtube ic"></i></a>
+                <!-- Linkedin -->
+              </div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <ul class="fa-ul">
+
+                <h4 style="color:gray;">CONTACT US</h4>
+                <a href="#" class="hi">
+                  <li>Address: Building 1C, 1st Sunset Commercial Street, Phase 4, Defence, Karachi.</li>
+                </a>
+                <a href="" class="hi">
+                  <li>@Hijabelegance.com</li>
+                </a>
+                <a href="" class="hi">
+                  <li>0326574559567</li>
+                </a>
+
+         
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);color: gray;">
+          © 2020 Copyright:
+          <a class="" href="index.html" style="color: gray;">Hijabelegance.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    </div>
+
+
+
+    <script>
+      AOS.init();
+    </script>
+
+
+    <script src="naqab.js"></script>
+    
+</body>
+</html>

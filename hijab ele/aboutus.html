@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIJAB-ELEGANCE.COM</title>
+    <link rel="shortcut icon" href="img/design-removebg-preview.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <!-- <script src="js/jquery.js"></script> -->
+
+    
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .thirdnavbar {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+
+}
+.header {
+  width: 100%;
+  height: 5vh;
+  background-color: rgba(170, 41, 41, 0.528);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+
+.navbar-nav {
+  margin-left: 21vw;
+
+}
+.mainbar {
+  padding-left:  5%; 
+  margin-top: 1%;  
+}
+@media only screen and (max-width: 600px) {
+  .mainbar {
+    padding-left: 10%;
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .mainbar {
+    padding-left: 7%;
+    margin-top: 1%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mainbar {
+  padding-left: 2px;
+    margin-top: 2%;
+  }
+}
+.nav-link {
+  color: rgb(141, 139, 139);
+}
+.nav-link:hover {
+  color: rgba(170, 41, 41, 0.528);
+}
+
+a:hover {
+
+  border-bottom: 0.5px solid rgba(170, 41, 41, 0.528);
+  border-top: 2px solid rgba(170, 41, 41, 0.528);
+}
+/* Base styles for all devices */
+.hijab {
+  width: 100%;
+  max-width: 13vw;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .hijab {
+    width: 15vw;
+  }
+}
+
+/* For medium screens */
+@media (max-width: 767px) {
+  .hijab {
+    width: 30vw; /* Adjust as necessary */
+  }
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+  .hijab {
+    width: 80vw; /* Adjust as necessary */
+  }
+}
+.cart {
+  font-size: 30px;
+  margin-left: 160px;
+}
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+
+
+  .cart {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+
+  .cart {
+    font-size: 25px;
+  }
+}
+
+/* Large devices (desktops, 768px and above) */
+@media only screen and (min-width: 769px) {
+
+  .cart {
+    font-size: 30px;
+  }
+}
+
+
+
+.nav-link:hover {
+  color: rgba(170, 41, 41, 0.528);
+}
+
+
+        .baner {
+            width: 100%;
+            height: 350px;
+            background-image: url(https://fabriclore.com/cdn/shop/articles/Blog-Banner-for-graphics_3_80e2f79c-3f90-4914-87de-ccbed4225531.jpg?v=1665050127&width=2048);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .description {
+            color:  rgba(170, 41, 41, 0.528);
+            position: absolute;
+            bottom: 120px;
+            left: 80px;
+        }
+
+        .description h1 {
+            font-weight: 900;
+            font-size: 60px;
+
+        }
+        .aboutus p{
+            font-size: large;
+            text-align: center;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        .ic{
+  color: rgba(170, 41, 41, 0.528);
+}
+.ic:hover{
+  color: gray;
+}
+        h2{
+          color:  rgba(170, 41, 41, 0.528);
+            text-align: center;
+            text-decoration: underline;
+        }
+        hr{
+           color: black;
+        }
+        .moto{
+            font-size: x-large;
+            font-weight: bold;
+            font-style: italic;
+            color:  rgba(170, 41, 41, 0.528);
+            padding-left: 150px;
+        }
+        .team{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 280px;
+            padding-bottom: 150px;
+        }
+        .pic{
+            border: none;
+        }
+        .text{
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            color: rgba(170, 41, 41, 0.528)
+
+        }
+        .team1{
+            width:100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 400px;
+        }
+        .swiper{
+            width: 90%;
+            height: 400px;
+            margin-left: 80px;
+        }
+        .container-swiper{
+            width: 90%;
+            height: 500px;
+            padding-top: 340px;
+            margin-bottom: 100px;
+            padding-left: 170px;
+            background-color:rgb(255, 255, 255);
+           
+    
+        }
+        .swiper-slide img{
+            width: 90%;
+            height: 400px;
+        }   
+        .swiper-button-next{
+            padding-right: 95px;
+        }
+        .portion{
+            margin-top: 100px;
+        }
+        /* .part{
+          padding-top: 500px;
+          width: 100%;
+          height: 500px;
+        } */
+        .hi{
+  color: gray;
+  text-decoration: none;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: .5;
+  }
+}
+.ic{
+  color: rgba(170, 41, 41, 0.528);
+}
+.ic:hover{
+  color: gray;
+}
+.blink {
+  color: rgb(255, 255, 255);
+  margin-left: 35PX;
+  text-transform: (-50%, -50%);
+  animation: blink 1s linear infinite;
+  font-weight: bolder;
+}
+        /* .footer{
+          padding-top: 300px;
+        } */
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <p class="blink">FREE SHIPPING ABOVE RUPEES 4500/=</p>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container-fluid thirdnavbar">
+      <a href="index.html"> <img class="hijab" src="img/design-removebg-preview.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item mainbar">
+            <a class="nav-link " aria-current="page" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item dropdown mainbar">
+            <a class="nav-link dropdown-toggle" href="hijab.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+         HIJAB
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="festive1.html">FESTIVE</a></li>
+              <li><a class="dropdown-item" href="silk1.html">SILK</a></li>
+              <li><a class="dropdown-item" href="chiffon.html">CHIFFON</a></li>
+              <li><a class="dropdown-item" href="geogereet .html">GEORGETTE</a></li>
+             <li><a class="dropdown-item" href="lawnn.html">LAWN</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mainbar">
+            <a class="nav-link" href="kimono.html">KIMONO</a>
+          </li>
+          <li class="nav-item mainbar">
+            <a class="nav-link" href="aboutus.html">ABOUT</a>
+          </li>
+
+          <li class="nav-item dropdown mainbar">
+            <a class="nav-link dropdown-toggle" href="accessories.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ACCESSORIES
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="underscrves1.html">CAP</a></li>
+              <li><a class="dropdown-item" href="naqab.html">NAQAB</a></li>
+              <li><a class="dropdown-item" href="surunchies1.html">SCRUNCHIES</a></li>
+            </ul>
+          </li>
+        
+        
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+          
+    <div class="baner">
+        <div class="description">
+            <h1>OUR STORY</h1>
+    </div>
+    </div><br>
+    <div class="aboutus">
+        <h2>About Us</h2>
+        <p> HIJAB ELEGANCE was born in 2010 out of a struggle familiar to many Muslim women, it was simply too hard to
+          find comfortable, quality hijabs that made me feel confident. I couldn’t undersstand why such an important
+          garment was so often treated as an afterthought. Clearly, I thought, we deserve better.
+          I knew that creating the kind of hijabs we needed would mean taking matters into my own hands. Inspired by
+          the Islamic tradition of ihsaan, doing everything with beauty and excellence, I founded this company with my
+          co-founder Ahmed Zedan and immediately got to work. We spent months searching for the perfect fabrics to
+          create hijabs, rigorously testing them to ensure they were breathable, comfortable, washable, durable and
+          beautiful, everything you should expect from your hijab.</p>
+          <hr> 
+          <span class="moto">Join us in our mission to create a world where every woman feels comfortable and confident</span>
+           <hr>
+      </div><br>
+      <h2>Our Team</h2>
+      <div class="team">
+        <div class="card pic" style="width: 18rem;">
+            <img src="img/team (4).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">CEO and CO-FOUNDER</p>
+            </div>
+          </div>
+
+          <div class="card pic" style="width: 18rem;">
+            <img src="img/team (3).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">PRODUCTION MANAGER</p>
+            </div>
+          </div>
+
+          <div class="card pic" style="width: 18rem;">
+            <img src="img/team (2).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">MERCHANDISE MANAGER</p>
+            </div>
+          </div>
+      </div><br<br>
+
+      <div class="team1">
+        <div class="card pic" style="width: 18rem;">
+            <img src="img/team (5).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">SOCIAL MEDIA MANAGER</p>
+            </div>
+          </div>
+
+          <div class="card pic" style="width: 20rem;">
+            <img src="img/team (1).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">SERVICE OFFICER</p>
+            </div>
+          </div>
+
+          <div class="card pic" style="width: 18rem;">
+            <img src="img/team (6).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text">ASSOCIATE DIRECTOR</p>
+            </div>
+          </div>
+      </div>
+
+      
+      <div class="container-swiper">
+        <h2>Our Best Sellers</h2><br>
+          <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/aboutus.jpg" width="100%"></div>
+                <div class="swiper-slide"><img src="img/banner1 (1).jpg"></div>
+                <div class="swiper-slide"><img src="img/swiper.jpg"></div>
+                <div class="swiper-slide"><img src="img/swiper (1).jpg"></div>
+                <div class="swiper-slide"><img src="img/swiper (2).jpg"></div>
+                <div class="swiper-slide"><img src="img/swiper (3).jpg"></div>
+                <div class="swiper-slide"><img src="img/swiper (4).jpg"></div>
+
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+      </div><br>
+
+    </div>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid"  style="background-color: rgba(255, 255, 255, 0.528);margin-top: 240px;">
+
+      <footer class="text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-1">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h4 style="color: white;"></h4>
+
+              <a href="index.html"> <img class="hijab" src="img/design-removebg-preview.png" alt=""></a>
+
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h4 style="padding-bottom: 20px;color:gray;">SIGN UP AND SAVE</h4>
+
+              <div class=" mb-4">
+                <form>
+                  <i class="fa-regular  fa-envelope front" style="color: gray;"></i>
+                  <input type="email" placeholder="Enter your email id" class="enter">
+
+                </form>
+              </div>
+              <div class="icons">
+                <!-- Facebook -->
+                <a type="button" href="https://www.facebook.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-facebook-f ic"></i></a>
+                <!-- Dribbble --> 
+                <a type="button" href="https://www.instagram.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-instagram ic"></i></a>
+                <!-- Twitter -->
+                <a type="button" href="https://web.whatsapp.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-whatsapp ic"></i></a>
+                <!-- Google + -->
+                <a type="button" href="https://www.youtube.com/" class="btn btn-floating btn-light btn-lg" target="_blank"><i
+                    class="fa-brands fa-youtube ic"></i></a>
+                <!-- Linkedin -->
+              </div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+              <ul class="fa-ul">
+
+                <h4 style="color:gray;">CONTACT US</h4>
+                <a href="#" class="hi">
+                  <li>Address: Building 1C, 1st Sunset Commercial Street, Phase 4, Defence, Karachi.</li>
+                </a>
+                <a href="" class="hi">
+                  <li>@Hijabelegance.com</li>
+                </a>
+                <a href="" class="hi">
+                  <li>0326574559567</li>
+                </a>
+
+         
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2);color: gray;">
+          © 2020 Copyright:
+          <a class="" href="index.html" style="color: gray;">Hijabelegance.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    </div>
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://kit.fontawesome.com/34c1ec2b7a.js"></script>
+
+      
+    <script>
+        const swiper = new Swiper('.swiper', {
+        autoplay: {delay:3000,},
+        loop: true,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',},});
+    </script>
+
+      
+
+
+
+
+
+
+<script>
+  AOS.init();
+</script>
+      
+</body>
+
+</html>
